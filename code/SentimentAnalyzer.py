@@ -61,7 +61,6 @@ class SentimentAnalyzer:
         text = re.sub(r'@[^\s]+', '', text) 
         text = re.sub(r'#([^\s]+)', r'\1', text)
         text = re.sub(r'[^A-Za-z]+', ' ', text) 
-        text = re.sub(r'rt|fb|nflx|goog|googl|axp|aapl', '', text, flags = re.I) 
         text = re.sub(r'\b[a-zA-Z]\b', '', text) 
         text = re.sub(r' [ ]+', ' ', text) 
         text = text.lower() 
